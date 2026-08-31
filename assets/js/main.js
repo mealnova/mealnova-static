@@ -37,6 +37,27 @@
     });
   }
 
+  // Enquiry form → opens WhatsApp with details prefilled (no backend needed)
+  var form = document.getElementById("enquiry-form");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var f = form.elements;
+      var g = function (n) { return f[n] && f[n].value ? f[n].value : "-"; };
+      var lines = [
+        "New catering enquiry — Mealnova",
+        "Name: " + g("name"),
+        "Company: " + g("company"),
+        "Type: " + g("type"),
+        "Guests / meals: " + g("count"),
+        "Date: " + g("date"),
+        "Details: " + g("message")
+      ];
+      var wa = form.getAttribute("data-wa") || "917733727832";
+      window.open("https://wa.me/" + wa + "?text=" + encodeURIComponent(lines.join("\n")), "_blank");
+    });
+  }
+
   // Scroll reveal
   var revealables = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && revealables.length) {
