@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mealnova</title>
+  <link rel="canonical" href="https://mealnova.in/en/" />
+  <script>
+    (function () {
+      var supported = { hi: "hi", mr: "mr", en: "en" };
+      var lang = (navigator.language || "en").slice(0, 2).toLowerCase();
+      var target = supported[lang] || "en";
+      location.replace(target + "/");
+    })();
+  </script>
+  <meta http-equiv="refresh" content="0; url=en/" />
+</head>
+<body style="font-family:system-ui,sans-serif;background:#fbf8f3;color:#1a1613;display:grid;place-items:center;min-height:100vh;margin:0">
+  <p>Redirecting to <a href="en/">Mealnova</a> — choose a language:
+    <a href="en/">English</a> · <a href="hi/">हिन्दी</a> · <a href="mr/">मराठी</a></p>
+</body>
+</html>
