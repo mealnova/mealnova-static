@@ -25,4 +25,16 @@
     <xhtml:link rel="alternate" hreflang="mr" href="https://mealnova.in/mr/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mealnova.in/en/"/>
   </url>
+  <url>
+    <loc>https://mealnova.in/en/corporate-catering/</loc>
+    <lastmod>2026-08-31</lastmod>
+  </url>
+  <url>
+    <loc>https://mealnova.in/en/event-catering/</loc>
+    <lastmod>2026-08-31</lastmod>
+  </url>
+  <url>
+    <loc>https://mealnova.in/en/wedding-catering/</loc>
+    <lastmod>2026-08-31</lastmod>
+  </url>
 </urlset>
