@@ -113,21 +113,30 @@ h1, h2, h3 {
 .nav-toggle { display: none; background: none; border: 1px solid var(--line); border-radius: 10px; width: 42px; height: 42px; cursor: pointer; align-items: center; justify-content: center; }
 .nav-toggle svg { width: 20px; height: 20px; stroke: var(--ink); }
 
-/* ---------- Hero ---------- */
-.hero { padding: clamp(3rem, 7vw, 6rem) 0 clamp(2.5rem, 5vw, 4rem); }
-.hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
-.hero h1 { font-size: clamp(2.6rem, 6.2vw, 4.7rem); }
-.hero .hero-sub { color: var(--muted); font-size: 1.18rem; margin: 1.5rem 0 2.1rem; max-width: 42ch; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; }
-.hero-media { position: relative; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/5; background: var(--surface-2); box-shadow: var(--shadow); }
-.hero-media img { width: 100%; height: 100%; object-fit: cover; }
-.hero-media .tag {
-  position: absolute; left: 18px; bottom: 18px;
-  background: rgba(22,19,15,0.82); color: var(--cream);
-  padding: 0.55rem 0.95rem; border-radius: 999px; font-size: 0.82rem; font-weight: 600;
-  backdrop-filter: blur(6px); display: flex; align-items: center; gap: 0.5rem;
+/* ---------- Hero (full-bleed background video) ---------- */
+.hero { position: relative; display: flex; align-items: center; min-height: min(88vh, 780px); overflow: hidden; padding: clamp(4rem, 10vw, 7rem) 0; }
+.hero-bg { position: absolute; inset: 0; z-index: 0; background: var(--dark); }
+.hero-bg img, .hero-bg video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-bg video { z-index: 1; }
+.hero-bg::after {
+  content: ""; position: absolute; inset: 0; z-index: 2;
+  background:
+    linear-gradient(90deg, rgba(20,16,12,0.92) 0%, rgba(20,16,12,0.7) 42%, rgba(20,16,12,0.35) 76%, rgba(20,16,12,0.22) 100%),
+    linear-gradient(0deg, rgba(20,16,12,0.5), rgba(20,16,12,0.12));
 }
-.tag .dot { width: 7px; height: 7px; border-radius: 50%; background: #7ec98f; }
+.hero .container { position: relative; z-index: 3; }
+.hero-content { max-width: 640px; }
+.hero .eyebrow { color: #eab892; }
+.hero h1 { color: var(--cream); font-size: clamp(2.6rem, 6vw, 4.7rem); }
+.hero .hero-sub { color: rgba(244,237,225,0.85); font-size: 1.18rem; margin: 1.5rem 0 2.1rem; max-width: 44ch; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.hero-badge {
+  position: absolute; right: clamp(1rem, 4vw, 2.5rem); bottom: clamp(1rem, 4vw, 2rem); z-index: 3;
+  background: rgba(22,19,15,0.68); color: var(--cream); border: 1px solid rgba(244,237,225,0.16);
+  padding: 0.55rem 1rem; border-radius: 999px; font-size: 0.82rem; font-weight: 600;
+  backdrop-filter: blur(8px); display: flex; align-items: center; gap: 0.5rem;
+}
+.hero-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: #7ec98f; }
 
 /* ---------- Metrics bento ---------- */
 .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
@@ -204,8 +213,8 @@ h1, h2, h3 {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
-  .hero-grid { grid-template-columns: 1fr; }
-  .hero-media { aspect-ratio: 16/11; max-height: 380px; }
+  .hero { min-height: 80vh; }
+  .hero-bg::after { background: linear-gradient(0deg, rgba(20,16,12,0.86) 8%, rgba(20,16,12,0.45) 60%, rgba(20,16,12,0.55) 100%); }
   .metrics { grid-template-columns: repeat(2, 1fr); }
   .menu-grid { grid-template-columns: repeat(2, 1fr); }
   .loc-grid { grid-template-columns: repeat(2, 1fr); }
@@ -225,5 +234,6 @@ h1, h2, h3 {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
+  .hero-bg video { display: none; } /* show static fallback image instead of motion */
   * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
 }

@@ -41,21 +41,24 @@
   <main>
     <!-- Hero -->
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="reveal">
+      <div class="hero-bg">
+        <img class="hero-fallback" src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1600&q=70" alt="" aria-hidden="true" fetchpriority="high" />
+        <video autoplay muted loop playsinline preload="auto" poster="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1600&q=70">
+          <source src="../assets/video/hero.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="container">
+        <div class="hero-content reveal">
           <p class="eyebrow">FSSAI Certified · Multi-Cuisine · Since 2009</p>
           <h1>Operational catering for modern teams and events.</h1>
           <p class="hero-sub">Cafeteria management, daily meal subscriptions and multi-cuisine event catering for organisations across India — built around what operations teams actually need.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#contact">Get a free consultation</a>
-            <a class="btn btn-ghost" href="#menu">View the menu</a>
+            <a class="btn btn-outline-light" href="#menu">View the menu</a>
           </div>
         </div>
-        <div class="hero-media reveal">
-          <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1100&q=70" alt="A spread of freshly prepared Indian vegetarian dishes" onerror="this.style.display='none'" />
-          <span class="tag"><span class="dot"></span>600+ meals served daily</span>
-        </div>
       </div>
+      <span class="hero-badge"><span class="dot"></span>600+ meals served daily</span>
     </section>
 
     <!-- Metrics -->
