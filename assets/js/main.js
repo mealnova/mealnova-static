@@ -26,6 +26,17 @@
     });
   }
 
+  // Language dropdown — native <details>, just close on outside click / Escape
+  var langD = document.querySelector("details.lang");
+  if (langD) {
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest("details.lang")) langD.open = false;
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") langD.open = false;
+    });
+  }
+
   // Scroll reveal
   var revealables = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && revealables.length) {

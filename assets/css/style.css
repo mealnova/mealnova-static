@@ -105,11 +105,33 @@ h1, h2, h3 {
 .nav-links a { font-size: 0.95rem; color: var(--muted); font-weight: 500; transition: color 0.2s var(--ease); }
 .nav-links a:hover { color: var(--ink); }
 .nav-right { display: flex; align-items: center; gap: 1rem; }
-.lang { display: inline-flex; gap: 0.15rem; align-items: center; font-size: 0.8rem; font-weight: 600; color: var(--muted); }
-.lang a { padding: 0.15rem 0.4rem; border-radius: 6px; transition: color 0.2s, background 0.2s; }
-.lang a[aria-current="true"] { color: var(--ink); background: var(--accent-tint); }
-.lang a:hover { color: var(--ink); }
-.lang span { opacity: 0.4; }
+.lang { position: relative; }
+.lang-btn {
+  display: inline-flex; align-items: center; gap: 0.4rem; cursor: pointer; list-style: none; user-select: none;
+  padding: 0.42rem 0.7rem; border-radius: 999px; border: 1px solid var(--line); background: var(--surface);
+  color: var(--ink); font-family: "Inter", "Noto Sans Devanagari", sans-serif; font-weight: 600; font-size: 0.82rem; line-height: 1;
+  transition: border-color 0.2s var(--ease), background 0.2s var(--ease);
+}
+.lang-btn::-webkit-details-marker { display: none; }
+.lang-btn::marker { content: ""; }
+.lang-btn:hover { border-color: var(--ink); }
+.lang-btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.lang-btn .globe { width: 16px; height: 16px; stroke: var(--muted); flex: none; }
+.lang-btn .chev { width: 11px; height: 11px; stroke: var(--muted); flex: none; transition: transform 0.2s var(--ease); }
+.lang[open] .chev { transform: rotate(180deg); }
+.lang-menu {
+  position: absolute; top: calc(100% + 8px); right: 0; min-width: 168px; margin: 0; padding: 0.4rem; list-style: none; z-index: 60;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow);
+  animation: lang-in 0.16s var(--ease);
+}
+@keyframes lang-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+.lang-menu a {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.6rem 0.8rem; border-radius: 9px;
+  color: var(--ink); font-family: "Inter", "Noto Sans Devanagari", sans-serif; font-weight: 500; font-size: 0.92rem; transition: background 0.15s var(--ease);
+}
+.lang-menu a:hover { background: var(--surface-2); }
+.lang-menu a[aria-current="true"] { color: var(--accent-ink); font-weight: 700; }
+.lang-menu a[aria-current="true"]::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex: none; }
 .nav-toggle { display: none; background: none; border: 1px solid var(--line); border-radius: 10px; width: 42px; height: 42px; cursor: pointer; align-items: center; justify-content: center; }
 .nav-toggle svg { width: 20px; height: 20px; stroke: var(--ink); }
 
