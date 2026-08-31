@@ -120,17 +120,20 @@
           <h2 class="section-title">A multi-cuisine menu, cooked fresh daily.</h2>
           <p class="section-lead">Ten categories spanning thalis, regional favourites, South Indian, snacks and sweets — rotated across the week.</p>
         </div>
-        <div class="menu-grid">
-          <div class="menu-cat reveal"><div class="top"><h3>Thali</h3><span class="count">3 sets</span></div><p>Standard, Premium and Rajasthani thalis.</p></div>
-          <div class="menu-cat reveal"><div class="top"><h3>Sabzi</h3><span class="count">12 dishes</span></div><p>Aloo Gobi, Mix Veg, Paneer Tikka Masala, Shahi Paneer.</p></div>
-          <div class="menu-cat reveal"><div class="top"><h3>Dal</h3><span class="count">6 dishes</span></div><p>Dal Tadka, Dal Makhani, Moong Dal, Rajma.</p></div>
-          <div class="menu-cat reveal"><div class="top"><h3>Roti &amp; Bread</h3><span class="count">5 kinds</span></div><p>Chapati, Paratha, Naan, Bajra Roti.</p></div>
-          <div class="menu-cat reveal"><div class="top"><h3>Rice</h3><span class="count">4 dishes</span></div><p>Steamed Rice, Jeera Rice, Veg Pulao, Veg Biryani.</p></div>
-          <div class="menu-cat reveal"><div class="top"><h3>Starters &amp; Snacks</h3><span class="count">6 items</span></div><p>Samosa, Kachori, Dhokla, Pakora.</p></div>
-          <div class="menu-cat reveal"><div class="top"><h3>Sweets</h3><span class="count">5 items</span></div><p>Gulab Jamun, Gajar Halwa, Moong Dal Halwa, Rasgulla.</p></div>
-          <div class="menu-cat reveal"><div class="top"><h3>South Indian</h3><span class="count">4 dishes</span></div><p>Masala Dosa, Idli Sambar, Upma, Rava Dosa.</p></div>
-          <div class="menu-cat reveal"><div class="top"><h3>Breakfast</h3><span class="count">3 dishes</span></div><p>Poha, Aloo Paratha, Chole Bhature.</p></div>
-        </div>
+        <div class="menu-tabs" id="menu-tabs" role="tablist" aria-label="Menu categories"></div>
+        <div class="menu-dishes" id="menu-dishes"></div>
+        <p class="menu-note">Menus rotate through the week and adapt to your team's dietary needs — Jain, vegan and allergen-aware options available. <a href="#contact">Ask for the full menu →</a></p>
+        <noscript>
+          <div class="menu-grid">
+            <div class="menu-cat"><div class="top"><h3>Thali</h3><span class="count">3 sets</span></div><p>Standard, Premium and Rajasthani thalis.</p></div>
+            <div class="menu-cat"><div class="top"><h3>Sabzi</h3><span class="count">12 dishes</span></div><p>Aloo Gobi, Mix Veg, Paneer Tikka Masala, Shahi Paneer.</p></div>
+            <div class="menu-cat"><div class="top"><h3>Dal</h3><span class="count">6 dishes</span></div><p>Dal Tadka, Dal Makhani, Moong Dal, Rajma.</p></div>
+            <div class="menu-cat"><div class="top"><h3>Rice &amp; Breads</h3><span class="count">9 kinds</span></div><p>Jeera Rice, Veg Pulao, Naan, Paratha.</p></div>
+            <div class="menu-cat"><div class="top"><h3>South Indian</h3><span class="count">4 dishes</span></div><p>Masala Dosa, Idli Sambar, Upma, Rava Dosa.</p></div>
+            <div class="menu-cat"><div class="top"><h3>Snacks</h3><span class="count">6 items</span></div><p>Samosa, Kachori, Dhokla, Pakora.</p></div>
+            <div class="menu-cat"><div class="top"><h3>Sweets</h3><span class="count">5 items</span></div><p>Gulab Jamun, Gajar Halwa, Moong Dal Halwa, Rasgulla.</p></div>
+          </div>
+        </noscript>
       </div>
     </section>
 
@@ -188,6 +191,42 @@
         </div>
         <div class="split-media reveal">
           <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1000&q=70" alt="Indian spices laid out in the kitchen" onerror="this.style.display='none'" />
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Good to know</p>
+          <h2 class="section-title">Frequently asked questions.</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>How do I start a corporate meal program?</summary>
+            <p>Submit a quote through the site or call our team. After a quick review of your team size, location and requirements, approved clients receive an ordering link and a tailored plan.</p>
+          </details>
+          <details>
+            <summary>Which areas around Pune do you serve?</summary>
+            <p>We operate across Balewadi, Baner, Hinjewadi, Wakad and the surrounding IT corridor, run from our central kitchen in Balewadi.</p>
+          </details>
+          <details>
+            <summary>Do you cater to Jain, vegan or allergen-specific diets?</summary>
+            <p>Yes. Our menus are pure vegetarian, with Jain, vegan and allergen-aware options available on request for both daily meals and events.</p>
+          </details>
+          <details>
+            <summary>How does billing and GST work?</summary>
+            <p>Every invoice is GST-compliant. Corporate meal programs are billed per plate with employer-subsidy handling; event catering is quoted upfront and transparently.</p>
+          </details>
+          <details>
+            <summary>Can you handle large events and weddings?</summary>
+            <p>Absolutely — from 50 to 5,000 guests, with multi-cuisine live counters, plated service and buffet setups across Pune.</p>
+          </details>
+          <details>
+            <summary>How far in advance should I book an event?</summary>
+            <p>For large events we recommend reaching out at least a week ahead so we can plan menus, tastings and staffing. Smaller orders can often be arranged on shorter notice.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -253,6 +292,7 @@
   </footer>
 
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/menu.js"></script>
   <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
 </body>
 </html>

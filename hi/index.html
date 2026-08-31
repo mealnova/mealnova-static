@@ -116,17 +116,20 @@
           <h2 class="section-title">बहु-व्यंजन मेन्यू, हर दिन ताज़ा पकाया गया।</h2>
           <p class="section-lead">थाली, क्षेत्रीय पसंदीदा, दक्षिण भारतीय, स्नैक्स और मिठाइयों तक फैली दस श्रेणियाँ — सप्ताह भर घुमाई जाती हैं।</p>
         </div>
-        <div class="menu-grid">
-          <div class="menu-cat reveal"><div class="top"><h3>थाली</h3><span class="count">3 सेट</span></div><p>स्टैंडर्ड, प्रीमियम और राजस्थानी थाली।</p></div>
-          <div class="menu-cat reveal"><div class="top"><h3>सब्ज़ी</h3><span class="count">12 व्यंजन</span></div><p>Aloo Gobi, Mix Veg, Paneer Tikka Masala, Shahi Paneer।</p></div>
-          <div class="menu-cat reveal"><div class="top"><h3>दाल</h3><span class="count">6 व्यंजन</span></div><p>Dal Tadka, Dal Makhani, Moong Dal, Rajma।</p></div>
-          <div class="menu-cat reveal"><div class="top"><h3>रोटी और ब्रेड</h3><span class="count">5 प्रकार</span></div><p>Chapati, Paratha, Naan, Bajra Roti।</p></div>
-          <div class="menu-cat reveal"><div class="top"><h3>चावल</h3><span class="count">4 व्यंजन</span></div><p>Steamed Rice, Jeera Rice, Veg Pulao, Veg Biryani।</p></div>
-          <div class="menu-cat reveal"><div class="top"><h3>स्टार्टर और स्नैक्स</h3><span class="count">6 आइटम</span></div><p>Samosa, Kachori, Dhokla, Pakora।</p></div>
-          <div class="menu-cat reveal"><div class="top"><h3>मिठाई</h3><span class="count">5 आइटम</span></div><p>Gulab Jamun, Gajar Halwa, Moong Dal Halwa, Rasgulla।</p></div>
-          <div class="menu-cat reveal"><div class="top"><h3>दक्षिण भारतीय</h3><span class="count">4 व्यंजन</span></div><p>Masala Dosa, Idli Sambar, Upma, Rava Dosa।</p></div>
-          <div class="menu-cat reveal"><div class="top"><h3>नाश्ता</h3><span class="count">3 व्यंजन</span></div><p>Poha, Aloo Paratha, Chole Bhature।</p></div>
-        </div>
+        <div class="menu-tabs" id="menu-tabs" role="tablist" aria-label="मेन्यू श्रेणियाँ"></div>
+        <div class="menu-dishes" id="menu-dishes"></div>
+        <p class="menu-note">मेन्यू सप्ताह भर बदलता रहता है और आपकी टीम की आहार-ज़रूरतों के अनुसार ढलता है — जैन, वीगन और एलर्जन-सजग विकल्प उपलब्ध। <a href="#contact">पूरा मेन्यू माँगें →</a></p>
+        <noscript>
+          <div class="menu-grid">
+            <div class="menu-cat"><div class="top"><h3>थाली</h3><span class="count">3 सेट</span></div><p>स्टैंडर्ड, प्रीमियम और राजस्थानी थाली।</p></div>
+            <div class="menu-cat"><div class="top"><h3>सब्ज़ी</h3><span class="count">12 व्यंजन</span></div><p>Aloo Gobi, Mix Veg, Paneer Tikka Masala, Shahi Paneer।</p></div>
+            <div class="menu-cat"><div class="top"><h3>दाल</h3><span class="count">6 व्यंजन</span></div><p>Dal Tadka, Dal Makhani, Moong Dal, Rajma।</p></div>
+            <div class="menu-cat"><div class="top"><h3>चावल और ब्रेड</h3><span class="count">9 प्रकार</span></div><p>Jeera Rice, Veg Pulao, Naan, Paratha।</p></div>
+            <div class="menu-cat"><div class="top"><h3>दक्षिण भारतीय</h3><span class="count">4 व्यंजन</span></div><p>Masala Dosa, Idli Sambar, Upma, Rava Dosa।</p></div>
+            <div class="menu-cat"><div class="top"><h3>स्नैक्स</h3><span class="count">6 आइटम</span></div><p>Samosa, Kachori, Dhokla, Pakora।</p></div>
+            <div class="menu-cat"><div class="top"><h3>मिठाई</h3><span class="count">5 आइटम</span></div><p>Gulab Jamun, Gajar Halwa, Moong Dal Halwa, Rasgulla।</p></div>
+          </div>
+        </noscript>
       </div>
     </section>
 
@@ -181,6 +184,41 @@
         </div>
         <div class="split-media reveal">
           <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1000&q=70" alt="रसोई में सजे भारतीय मसाले" onerror="this.style.display='none'" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">जानने योग्य</p>
+          <h2 class="section-title">अक्सर पूछे जाने वाले प्रश्न।</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>कॉर्पोरेट मील प्रोग्राम कैसे शुरू करें?</summary>
+            <p>साइट से कोटेशन भेजें या हमारी टीम को कॉल करें। आपकी टीम के आकार, स्थान और आवश्यकताओं की त्वरित समीक्षा के बाद, स्वीकृत ग्राहकों को ऑर्डरिंग लिंक और अनुकूलित योजना मिलती है।</p>
+          </details>
+          <details>
+            <summary>पुणे में आप किन क्षेत्रों में सेवा देते हैं?</summary>
+            <p>हम बालेवाडी, बाणेर, हिंजवडी, वाकड और आसपास के आईटी कॉरिडोर में सेवा देते हैं, जो बालेवाडी स्थित हमारी केंद्रीय रसोई से संचालित होता है।</p>
+          </details>
+          <details>
+            <summary>क्या आप जैन, वीगन या एलर्जन-विशिष्ट आहार के लिए भी बनाते हैं?</summary>
+            <p>हाँ। हमारे मेन्यू शुद्ध शाकाहारी हैं, और दैनिक भोजन व आयोजनों दोनों के लिए जैन, वीगन और एलर्जन-सजग विकल्प अनुरोध पर उपलब्ध हैं।</p>
+          </details>
+          <details>
+            <summary>बिलिंग और GST कैसे काम करता है?</summary>
+            <p>हर इनवॉइस GST-अनुरूप होता है। कॉर्पोरेट मील प्रोग्राम प्रति प्लेट बिल होते हैं, जिसमें नियोक्ता-सब्सिडी शामिल होती है; इवेंट कैटरिंग का कोटेशन पहले ही पारदर्शी रूप से दिया जाता है।</p>
+          </details>
+          <details>
+            <summary>क्या आप बड़े आयोजन और शादियाँ संभाल सकते हैं?</summary>
+            <p>बिल्कुल — 50 से 5,000 मेहमानों तक, पुणे भर में बहु-व्यंजन लाइव काउंटर, प्लेटेड सेवा और बुफ़े सेटअप के साथ।</p>
+          </details>
+          <details>
+            <summary>आयोजन कितने पहले बुक करना चाहिए?</summary>
+            <p>बड़े आयोजनों के लिए हम कम से कम एक सप्ताह पहले संपर्क करने की सलाह देते हैं ताकि हम मेन्यू, टेस्टिंग और स्टाफ की योजना बना सकें। छोटे ऑर्डर अक्सर कम समय में भी व्यवस्थित हो जाते हैं।</p>
+          </details>
         </div>
       </div>
     </section>
@@ -245,6 +283,7 @@
   </footer>
 
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/menu.js"></script>
   <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
 </body>
 </html>
