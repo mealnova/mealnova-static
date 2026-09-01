@@ -2,6 +2,11 @@
 (function () {
   "use strict";
 
+  // GA4 lead tracking — safe no-op if analytics is blocked or absent
+  function track(name, params) {
+    if (typeof window.gtag === "function") window.gtag("event", name, params || {});
+  }
+
   // Sticky header border on scroll
   var header = document.querySelector(".site-header");
   var onScroll = function () {
@@ -54,9 +59,22 @@
         "Details: " + g("message")
       ];
       var wa = form.getAttribute("data-wa") || "917733727832";
+      track("generate_lead", { method: "whatsapp_form", lead_type: g("type") });
       window.open("https://wa.me/" + wa + "?text=" + encodeURIComponent(lines.join("\n")), "_blank");
     });
   }
+
+  // Lead tracking on WhatsApp / phone-call links (GA4 conversion)
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest("a[href]") : null;
+    if (!a) return;
+    var href = a.getAttribute("href") || "";
+    if (href.indexOf("wa.me") !== -1 || href.indexOf("whatsapp.com") !== -1) {
+      track("generate_lead", { method: "whatsapp_click" });
+    } else if (href.indexOf("tel:") === 0) {
+      track("generate_lead", { method: "phone_call" });
+    }
+  });
 
   // Scroll reveal
   var revealables = document.querySelectorAll(".reveal");
