@@ -250,6 +250,12 @@ h1, h2, h3 {
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
 .split-media { border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 5/4; box-shadow: var(--shadow); background: var(--surface-2); }
 .split-media img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Real kitchen photo gallery */
+.gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.gallery figure { position: relative; margin: 0; aspect-ratio: 1; border-radius: var(--radius-lg); overflow: hidden; background: var(--surface-2); }
+.gallery img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.gallery figcaption { position: absolute; inset: auto 0 0 0; padding: 1.8rem 0.95rem 0.8rem; font-size: 0.88rem; font-weight: 600; color: #fff; background: linear-gradient(transparent, rgba(20,16,12,0.8)); }
 .feature-list { list-style: none; padding: 0; margin: 1.6rem 0 0; display: grid; gap: 0.85rem; }
 .feature-list li { display: flex; gap: 0.7rem; align-items: flex-start; color: var(--muted); }
 .feature-list svg { width: 20px; height: 20px; stroke: var(--accent-ink); flex: none; margin-top: 2px; }
@@ -296,6 +302,7 @@ h1, h2, h3 {
   .nav-links a { padding: 0.85rem clamp(1.15rem, 4vw, 2.5rem); width: 100%; border-bottom: 1px solid var(--line); }
   .nav-toggle { display: inline-flex; }
   .nav-right .btn-primary { display: none; }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
   .cards { grid-template-columns: 1fr; }
 }
 @media (min-width: 961px) and (max-width: 1120px) {

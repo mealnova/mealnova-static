@@ -20,7 +20,7 @@
       en: ["Premium Thali", "A full spread — curries, dal, rice, roti, salad and a sweet."],
       hi: ["प्रीमियम थाली", "करी, दाल, चावल, रोटी, सलाद और मिठाई — भरपूर थाली।"],
       mr: ["प्रीमियम थाळी", "करी, डाळ, भात, पोळी, सॅलड आणि गोड — भरगच्च थाळी."] },
-    { img: "1631452180519-c014fe946bc7", cat: "mains",
+    { src: "/assets/img/kitchen/paneer-masala.jpg", cat: "mains",
       en: ["Shahi Paneer", "Paneer in a rich cashew-tomato gravy."],
       hi: ["शाही पनीर", "काजू-टमाटर की मलाईदार ग्रेवी में पनीर।"],
       mr: ["शाही पनीर", "काजू-टोमॅटोच्या मलईदार ग्रेव्हीतील पनीर."] },
@@ -32,7 +32,7 @@
       en: ["Dal Makhani", "Black lentils slow-cooked with butter and cream."],
       hi: ["दाल मखनी", "मक्खन और क्रीम में धीमी आँच पर पकी काली दाल।"],
       mr: ["डाळ मखनी", "लोणी आणि क्रीममध्ये मंद आचेवर शिजवलेली काळी डाळ."] },
-    { img: "1697155406121-85aac6236000", cat: "mains",
+    { src: "/assets/img/kitchen/dal-tadka.jpg", cat: "mains",
       en: ["Dal Tadka", "Yellow lentils tempered with cumin and garlic."],
       hi: ["दाल तड़का", "जीरा और लहसुन के तड़के वाली पीली दाल।"],
       mr: ["डाळ तडका", "जिरे व लसणाची फोडणी दिलेली पिवळी डाळ."] },
@@ -98,7 +98,7 @@
     card.innerHTML =
       '<div class="dish-img">' +
         '<span class="dish-cat">' + catLabel(cat) + '</span>' +
-        '<img loading="lazy" alt="' + t[0] + '" src="' + IMG + d.img + Q + '" ' +
+        '<img loading="lazy" alt="' + t[0] + '" src="' + (d.src || IMG + d.img + Q) + '" ' +
           'onerror="this.style.display=\'none\'" />' +
       '</div>' +
       '<div class="dish-body">' +
